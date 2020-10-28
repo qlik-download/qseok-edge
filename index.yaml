@@ -1,8 +1,525 @@
 apiVersion: v1
 entries:
+  qliksense:
+  - apiVersion: v1
+    appVersion: "2020.06"
+    created: "2020-10-28T07:24:10.015840236Z"
+    dependencies:
+    - condition: audit.enabled
+      name: audit
+      repository: '@qlik'
+      version: 3.6.2
+    - condition: api-keys.enabled
+      name: api-keys
+      repository: '@qlik'
+      version: 3.1.0
+    - condition: devMode.enabled
+      name: mongodb
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 4.5.0
+    - name: redis
+      repository: '@stable'
+      version: 10.5.6
+    - condition: chronos.enabled
+      name: chronos
+      repository: '@qlik'
+      version: 1.6.6
+    - condition: chronos-worker.enabled
+      name: chronos-worker
+      repository: '@qlik'
+      version: 1.4.10
+    - condition: collections.enabled
+      name: collections
+      repository: '@qlik'
+      version: 3.2.19
+    - condition: data-connections.enabled
+      name: data-connections
+      repository: '@qlik'
+      version: 2.1.4
+    - condition: data-connector-common.enabled
+      name: data-connector-common
+      repository: '@qlik'
+      version: 1.1.5
+    - condition: data-connector-qwc.enabled
+      name: data-connector-qwc
+      repository: '@qlik'
+      version: 4.0.4
+    - condition: data-connector-odbc.enabled
+      name: data-connector-odbc
+      repository: '@qlik'
+      version: 2.0.0
+    - condition: data-connector-rest.enabled
+      name: data-connector-rest
+      repository: '@qlik'
+      version: 2.0.2
+    - condition: data-connector-sap-sql.enabled
+      name: data-connector-sap-sql
+      repository: '@qlik'
+      version: 2.0.0
+    - condition: data-connector-sfdc.enabled
+      name: data-connector-sfdc
+      repository: '@qlik'
+      version: 2.0.2
+    - condition: data-connector-nfs.enabled
+      name: data-connector-nfs
+      repository: '@qlik'
+      version: 1.2.3
+    - condition: data-prep.enabled
+      name: data-prep
+      repository: '@qlik'
+      version: 3.2.8
+    - condition: data-rest-source.enabled
+      name: data-rest-source
+      repository: '@qlik'
+      version: 1.2.2
+    - condition: dcaas.enabled
+      name: dcaas
+      repository: '@qlik'
+      version: 1.8.4
+    - condition: dcaas-web.enabled
+      name: dcaas-web
+      repository: '@qlik'
+      version: 2.0.0
+    - condition: edge-auth.enabled
+      name: edge-auth
+      repository: '@qlik'
+      version: 6.3.6
+    - condition: elastic-infra.enabled
+      name: elastic-infra
+      repository: '@qlik'
+      version: 3.0.7
+    - condition: encryption.enabled
+      name: encryption
+      repository: '@qlik'
+      version: 3.1.3
+    - condition: engine.enabled
+      name: engine
+      repository: '@qlik'
+      version: 2.1.32
+    - condition: eventing.enabled
+      name: eventing
+      repository: '@qlik'
+      version: 2.2.10
+    - condition: feature-flags.enabled
+      name: feature-flags
+      repository: '@qlik'
+      version: 3.0.3
+    - condition: geo-operations.enabled
+      name: geo-operations
+      repository: '@qlik'
+      version: 1.1.4
+    - condition: groups.enabled
+      name: groups
+      repository: '@qlik'
+      version: 3.1.0
+    - condition: generic-links.enabled
+      name: generic-links
+      repository: '@qlik'
+      version: 2.0.5
+    - condition: hub.enabled
+      name: hub
+      repository: '@qlik'
+      version: 1.3.154
+    - condition: identity-providers.enabled
+      name: identity-providers
+      repository: '@qlik'
+      version: 1.8.37
+    - condition: insights.enabled
+      name: insights
+      repository: '@qlik'
+      version: 2.1.5
+    - condition: keys.enabled
+      name: keys
+      repository: '@qlik'
+      version: 1.6.3
+    - condition: licenses.enabled
+      name: licenses
+      repository: '@qlik'
+      version: 2.0.5
+    - condition: locale.enabled
+      name: locale
+      repository: '@qlik'
+      version: 1.3.7
+    - condition: messaging.enabled
+      name: messaging
+      repository: '@qlik'
+      version: 5.0.2
+    - condition: management-console.enabled
+      name: management-console
+      repository: '@qlik'
+      version: 2.0.38
+    - condition: nl-broker.enabled
+      name: nl-broker
+      repository: '@qlik'
+      version: 2.1.15
+    - condition: nl-parser.enabled
+      name: nl-parser
+      repository: '@qlik'
+      version: 2.0.4
+    - condition: notification-prep.enabled
+      name: notification-prep
+      repository: '@qlik'
+      version: 2.0.7
+    - condition: odag.enabled
+      name: odag
+      repository: '@qlik'
+      version: 1.9.9
+    - condition: policy-decisions.enabled
+      name: policy-decisions
+      repository: '@qlik'
+      version: 2.0.7
+    - condition: precedents.enabled
+      name: precedents
+      repository: '@qlik'
+      version: 2.0.1
+    - condition: qix-data-connection.enabled
+      name: qix-data-connection
+      repository: '@qlik'
+      version: 1.8.9
+    - condition: qix-datafiles.enabled
+      name: qix-datafiles
+      repository: '@qlik'
+      version: 1.10.57
+    - condition: qix-sessions.enabled
+      name: qix-sessions
+      repository: '@qlik'
+      version: 7.2.16
+    - condition: quotas.enabled
+      name: quotas
+      repository: '@qlik'
+      version: 2.1.2
+    - condition: qlikview-client.enabled
+      name: qlikview-client
+      repository: '@qlik'
+      version: 2.0.1
+    - name: qlikcommon
+      repository: '@qlik'
+      version: 2.1.9
+    - condition: reloads.enabled
+      name: reloads
+      repository: '@qlik'
+      version: 1.7.18
+    - condition: reload-tasks.enabled
+      name: reload-tasks
+      repository: '@qlik'
+      version: 1.6.7
+    - condition: reporting.enabled
+      name: reporting
+      repository: '@qlik'
+      version: 1.19.3
+    - condition: resource-library.enabled
+      name: resource-library
+      repository: '@qlik'
+      version: 2.2.1
+    - condition: sense-client.enabled
+      name: sense-client
+      repository: '@qlik'
+      version: 2.0.14
+    - condition: spaces.enabled
+      name: spaces
+      repository: '@qlik'
+      version: 2.8.41
+    - condition: sharing.enabled
+      name: sharing
+      repository: '@qlik'
+      version: 2.2.5
+    - condition: subscriptions.enabled
+      name: subscriptions
+      repository: '@qlik'
+      version: 1.0.8
+    - condition: temporary-contents.enabled
+      name: temporary-contents
+      repository: '@qlik'
+      version: 1.3.21
+    - condition: tenants.enabled
+      name: tenants
+      repository: '@qlik'
+      version: 4.2.1
+    - condition: transport.enabled
+      name: transport
+      repository: '@qlik'
+      version: 2.0.2
+    - condition: users.enabled
+      name: users
+      repository: '@qlik'
+      version: 2.2.7
+    - condition: web-notifications.enabled
+      name: web-notifications
+      repository: '@qlik'
+      version: 1.5.14
+    - condition: web-security.enabled
+      name: web-security
+      repository: '@qlik'
+      version: 2.1.1
+    description: Qlik Sense Enterprise on Kubernetes
+    digest: e2d9c56146bec7d525fd2948589a6fe85d46b038eb9081a0fb495d4260635d95
+    home: https://www.qlik.com
+    kubeVersion: '>=1.10.0-0'
+    name: qliksense
+    urls:
+    - qliksense-1.65.82.tgz
+    version: 1.65.82
+  - apiVersion: v1
+    appVersion: "2020.06"
+    created: "2020-10-28T07:24:10.288468377Z"
+    dependencies:
+    - condition: audit.enabled
+      name: audit
+      repository: '@qlik'
+      version: 3.6.2
+    - condition: api-keys.enabled
+      name: api-keys
+      repository: '@qlik'
+      version: 3.1.0
+    - condition: devMode.enabled
+      name: mongodb
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 4.5.0
+    - name: redis
+      repository: '@stable'
+      version: 10.5.6
+    - condition: chronos.enabled
+      name: chronos
+      repository: '@qlik'
+      version: 1.6.6
+    - condition: chronos-worker.enabled
+      name: chronos-worker
+      repository: '@qlik'
+      version: 1.4.10
+    - condition: collections.enabled
+      name: collections
+      repository: '@qlik'
+      version: 3.2.19
+    - condition: data-connections.enabled
+      name: data-connections
+      repository: '@qlik'
+      version: 2.1.4
+    - condition: data-connector-common.enabled
+      name: data-connector-common
+      repository: '@qlik'
+      version: 1.1.5
+    - condition: data-connector-qwc.enabled
+      name: data-connector-qwc
+      repository: '@qlik'
+      version: 4.0.4
+    - condition: data-connector-odbc.enabled
+      name: data-connector-odbc
+      repository: '@qlik'
+      version: 2.0.0
+    - condition: data-connector-rest.enabled
+      name: data-connector-rest
+      repository: '@qlik'
+      version: 2.0.2
+    - condition: data-connector-sap-sql.enabled
+      name: data-connector-sap-sql
+      repository: '@qlik'
+      version: 2.0.0
+    - condition: data-connector-sfdc.enabled
+      name: data-connector-sfdc
+      repository: '@qlik'
+      version: 2.0.2
+    - condition: data-connector-nfs.enabled
+      name: data-connector-nfs
+      repository: '@qlik'
+      version: 1.2.3
+    - condition: data-prep.enabled
+      name: data-prep
+      repository: '@qlik'
+      version: 3.2.8
+    - condition: data-rest-source.enabled
+      name: data-rest-source
+      repository: '@qlik'
+      version: 1.2.2
+    - condition: dcaas.enabled
+      name: dcaas
+      repository: '@qlik'
+      version: 1.8.4
+    - condition: dcaas-web.enabled
+      name: dcaas-web
+      repository: '@qlik'
+      version: 2.0.0
+    - condition: edge-auth.enabled
+      name: edge-auth
+      repository: '@qlik'
+      version: 6.3.6
+    - condition: elastic-infra.enabled
+      name: elastic-infra
+      repository: '@qlik'
+      version: 3.0.7
+    - condition: encryption.enabled
+      name: encryption
+      repository: '@qlik'
+      version: 3.1.3
+    - condition: engine.enabled
+      name: engine
+      repository: '@qlik'
+      version: 2.1.32
+    - condition: eventing.enabled
+      name: eventing
+      repository: '@qlik'
+      version: 2.2.10
+    - condition: feature-flags.enabled
+      name: feature-flags
+      repository: '@qlik'
+      version: 3.0.3
+    - condition: geo-operations.enabled
+      name: geo-operations
+      repository: '@qlik'
+      version: 1.1.4
+    - condition: groups.enabled
+      name: groups
+      repository: '@qlik'
+      version: 3.1.0
+    - condition: generic-links.enabled
+      name: generic-links
+      repository: '@qlik'
+      version: 2.0.5
+    - condition: hub.enabled
+      name: hub
+      repository: '@qlik'
+      version: 1.3.154
+    - condition: identity-providers.enabled
+      name: identity-providers
+      repository: '@qlik'
+      version: 1.8.37
+    - condition: insights.enabled
+      name: insights
+      repository: '@qlik'
+      version: 2.1.5
+    - condition: keys.enabled
+      name: keys
+      repository: '@qlik'
+      version: 1.6.3
+    - condition: licenses.enabled
+      name: licenses
+      repository: '@qlik'
+      version: 2.0.5
+    - condition: locale.enabled
+      name: locale
+      repository: '@qlik'
+      version: 1.3.7
+    - condition: messaging.enabled
+      name: messaging
+      repository: '@qlik'
+      version: 5.0.2
+    - condition: management-console.enabled
+      name: management-console
+      repository: '@qlik'
+      version: 2.0.38
+    - condition: nl-broker.enabled
+      name: nl-broker
+      repository: '@qlik'
+      version: 2.1.15
+    - condition: nl-parser.enabled
+      name: nl-parser
+      repository: '@qlik'
+      version: 2.0.4
+    - condition: notification-prep.enabled
+      name: notification-prep
+      repository: '@qlik'
+      version: 2.0.7
+    - condition: odag.enabled
+      name: odag
+      repository: '@qlik'
+      version: 1.9.9
+    - condition: policy-decisions.enabled
+      name: policy-decisions
+      repository: '@qlik'
+      version: 2.0.7
+    - condition: precedents.enabled
+      name: precedents
+      repository: '@qlik'
+      version: 2.0.1
+    - condition: qix-data-connection.enabled
+      name: qix-data-connection
+      repository: '@qlik'
+      version: 1.8.9
+    - condition: qix-datafiles.enabled
+      name: qix-datafiles
+      repository: '@qlik'
+      version: 1.10.57
+    - condition: qix-sessions.enabled
+      name: qix-sessions
+      repository: '@qlik'
+      version: 7.2.16
+    - condition: quotas.enabled
+      name: quotas
+      repository: '@qlik'
+      version: 2.1.2
+    - condition: qlikview-client.enabled
+      name: qlikview-client
+      repository: '@qlik'
+      version: 2.0.1
+    - name: qlikcommon
+      repository: '@qlik'
+      version: 2.1.9
+    - condition: reloads.enabled
+      name: reloads
+      repository: '@qlik'
+      version: 1.7.18
+    - condition: reload-tasks.enabled
+      name: reload-tasks
+      repository: '@qlik'
+      version: 1.6.7
+    - condition: reporting.enabled
+      name: reporting
+      repository: '@qlik'
+      version: 1.19.3
+    - condition: resource-library.enabled
+      name: resource-library
+      repository: '@qlik'
+      version: 2.2.1
+    - condition: sense-client.enabled
+      name: sense-client
+      repository: '@qlik'
+      version: 2.0.14
+    - condition: spaces.enabled
+      name: spaces
+      repository: '@qlik'
+      version: 2.8.41
+    - condition: sharing.enabled
+      name: sharing
+      repository: '@qlik'
+      version: 2.2.5
+    - condition: subscriptions.enabled
+      name: subscriptions
+      repository: '@qlik'
+      version: 1.0.8
+    - condition: temporary-contents.enabled
+      name: temporary-contents
+      repository: '@qlik'
+      version: 1.3.21
+    - condition: tenants.enabled
+      name: tenants
+      repository: '@qlik'
+      version: 4.2.1
+    - condition: transport.enabled
+      name: transport
+      repository: '@qlik'
+      version: 2.0.2
+    - condition: users.enabled
+      name: users
+      repository: '@qlik'
+      version: 2.2.7
+    - condition: web-notifications.enabled
+      name: web-notifications
+      repository: '@qlik'
+      version: 1.5.14
+    - condition: web-security.enabled
+      name: web-security
+      repository: '@qlik'
+      version: 2.1.1
+    description: Qlik Sense Enterprise on Kubernetes
+    digest: e2d9c56146bec7d525fd2948589a6fe85d46b038eb9081a0fb495d4260635d95
+    home: https://www.qlik.com
+    kubeVersion: '>=1.10.0-0'
+    name: qliksense
+    urls:
+    - charts/qliksense-1.65.82.tgz
+    version: 1.65.82
   qliksense-init:
   - apiVersion: v1
-    created: "2020-10-28T07:20:30.359323785Z"
+    created: "2020-10-28T07:24:10.018092931Z"
     dependencies:
     - condition: engine-crds.enabled
       name: engine-crds
@@ -17,20 +534,4 @@ entries:
     urls:
     - qliksense-init-1.4.1.tgz
     version: 1.4.1
-  - apiVersion: v1
-    created: "2020-10-28T07:20:30.361508612Z"
-    dependencies:
-    - condition: engine-crds.enabled
-      name: engine-crds
-      repository: '@qlik'
-      version: 1.1.0
-    description: |
-      Helm chart for the Custom Resource Definitions used by qliksense
-    digest: ab199d99d9a7b48c9d0ccecdf0c5e682ab6f59468c2fee4a2357475b1418c597
-    home: https://www.qlik.com
-    kubeVersion: '>=1.10.0-0'
-    name: qliksense-init
-    urls:
-    - charts/qliksense-init-1.4.1.tgz
-    version: 1.4.1
-generated: "2020-10-28T07:20:30.35684364Z"
+generated: "2020-10-28T07:24:09.728969951Z"
