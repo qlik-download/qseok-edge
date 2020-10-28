@@ -3,7 +3,7 @@ entries:
   qliksense:
   - apiVersion: v1
     appVersion: "2020.06"
-    created: "2020-10-28T07:38:23.085618883Z"
+    created: "2020-10-28T16:35:30.078139566Z"
     dependencies:
     - condition: audit.enabled
       name: audit
@@ -261,7 +261,7 @@ entries:
     version: 1.65.82
   qliksense-init:
   - apiVersion: v1
-    created: "2020-10-28T07:38:23.091982895Z"
+    created: "2020-10-28T16:35:30.080686645Z"
     dependencies:
     - condition: engine-crds.enabled
       name: engine-crds
@@ -269,11 +269,11 @@ entries:
       version: 1.1.0
     description: |
       Helm chart for the Custom Resource Definitions used by qliksense
-    digest: dee5256deca28c9fc84c15a105fdd41ce798475d293a576bc79b2336c6306b8a
+    digest: fc92b0534a59181bbcb3cd7d716c9b9cfac9a634214de81127862122ee59af77
     home: https://www.qlik.com
     kubeVersion: '>=1.10.0-0'
     name: qliksense-init
     urls:
     - qliksense-init-1.4.1.tgz
     version: 1.4.1
-generated: "2020-10-28T07:38:22.815587963Z"
+generated: "2020-10-28T16:35:29.73078901Z"
