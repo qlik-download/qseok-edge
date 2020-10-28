@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  qliksense-init:
+  - apiVersion: v1
+    created: "2020-10-28T07:20:30.359323785Z"
+    dependencies:
+    - condition: engine-crds.enabled
+      name: engine-crds
+      repository: '@qlik'
+      version: 1.1.0
+    description: |
+      Helm chart for the Custom Resource Definitions used by qliksense
+    digest: ab199d99d9a7b48c9d0ccecdf0c5e682ab6f59468c2fee4a2357475b1418c597
+    home: https://www.qlik.com
+    kubeVersion: '>=1.10.0-0'
+    name: qliksense-init
+    urls:
+    - qliksense-init-1.4.1.tgz
+    version: 1.4.1
+  - apiVersion: v1
+    created: "2020-10-28T07:20:30.361508612Z"
+    dependencies:
+    - condition: engine-crds.enabled
+      name: engine-crds
+      repository: '@qlik'
+      version: 1.1.0
+    description: |
+      Helm chart for the Custom Resource Definitions used by qliksense
+    digest: ab199d99d9a7b48c9d0ccecdf0c5e682ab6f59468c2fee4a2357475b1418c597
+    home: https://www.qlik.com
+    kubeVersion: '>=1.10.0-0'
+    name: qliksense-init
+    urls:
+    - charts/qliksense-init-1.4.1.tgz
+    version: 1.4.1
+generated: "2020-10-28T07:20:30.35684364Z"
